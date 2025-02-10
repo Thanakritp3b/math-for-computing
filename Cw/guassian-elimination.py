@@ -4,9 +4,15 @@ def gaussian_elimination(A, b):
     for i in range(n):
         A[i].append(b[i][0])
 
+    for i in range(n):
+        if A[i][i] == 0:
+            for j in range(i + 1, n):
+                if A[j][i] != 0:
+                    A[i], A[j] = A[j], A[i]
+                    break
+        
+      
 
-       
-    
 
 
 A = [[1, 1, 1],
