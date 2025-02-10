@@ -11,8 +11,17 @@ def gaussian_elimination(A, b):
                     A[i], A[j] = A[j], A[i]
                     break
         
-      
+        for j in range(i + 1, n):
+            factor = A[j][i] / A[i][i]
+            for k in range(i, n + 1):  
+                A[j][k] -= factor * A[i][k]
 
+            print(f"Step {i+1}:")
+            for row in A:
+                print(row)
+            print()
+    
+   
 
 
 A = [[1, 1, 1],
