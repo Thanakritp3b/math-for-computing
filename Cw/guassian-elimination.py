@@ -21,7 +21,14 @@ def gaussian_elimination(A, b):
                 print(row)
             print()
     
-   
+    x = [0] * n
+    for i in range(n - 1, -1, -1):
+        x[i] = A[i][-1]  
+        for j in range(i + 1, n):
+            x[i] -= A[i][j] * x[j]
+        x[i] /= A[i][i]
+    
+    return x
 
 
 A = [[1, 1, 1],
