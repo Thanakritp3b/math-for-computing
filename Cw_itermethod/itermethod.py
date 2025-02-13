@@ -124,8 +124,17 @@ def main():
     
     print("\nGauss-Seidel Method (Hilbert):")
     _, seidel_errors_hilbert = seidel_iter(hilbert_matrix, hilbert_result, x0_hilbert.copy(), hilbert_solution)
-    
+     
     plot_convergence(jacobi_errors_hilbert, seidel_errors_hilbert)
 
 if __name__ == "__main__":
     main()
+
+"""
+
+[0 , 2 ]
+[3 , 5 ]
+[2 , 1 ]
+
+
+"""
