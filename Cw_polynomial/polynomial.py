@@ -48,9 +48,8 @@ def plot_polynomial(x, y, coefficients, x_values, y_real, larrange_y):
     plt.show()
 
 
-
 interval = (0, 4)
-x = gen_x(interval[0], interval[1], 8)
+x = gen_x(interval[0], interval[1], 10)
 y = [f(xi) for xi in x]
 matrix = get_matrix(x)
 solve_matrix = np.linalg.solve(matrix, y)
